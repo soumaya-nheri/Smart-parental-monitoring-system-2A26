@@ -1,15 +1,13 @@
-#include "dialogmelek.h"
-#include "connexion.h"
+#include "dialog.h"
 #include <QApplication>
 #include <QMessageBox>
-
+#include "connexion.h"
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     connexion c;
     bool test=c.create_cnx();
-
-    Dialogmelek w;
+    Dialog w;
     if(test)
     {    w.show();
         QMessageBox::information(nullptr,QObject::tr("database is open"),
@@ -27,6 +25,7 @@ int main(int argc, char *argv[])
 
 
 
-    w.show();
+
+
     return a.exec();
 }

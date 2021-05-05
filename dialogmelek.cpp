@@ -9,6 +9,7 @@
 #include<QMessageBox>
 #include<QPainter>
 #include<QPdfWriter>
+#include"login.h"
 Dialogmelek::Dialogmelek(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::Dialogmelek)
@@ -184,4 +185,12 @@ void Dialogmelek::on_pushButton_stat_clicked()
 void Dialogmelek::on_pushButton_clicked()
 {
 ac.genererPDFact();
+}
+
+void Dialogmelek::on_pushButton_2_clicked()
+{
+    hide();
+    login *log;
+    log=new login();
+    log->show();
 }
